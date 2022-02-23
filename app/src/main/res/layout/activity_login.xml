@@ -3,7 +3,7 @@
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
-tools:context=".MainActivity"
+tools:context=".LoginActivity"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 >
@@ -12,8 +12,7 @@ android:layout_height="match_parent"
 
 <TextView
 android:layout_width="match_parent"
-android:layout_height="90dp"
-android:height="100dp"
+android:layout_height="50dp"
 android:background="#198754"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
@@ -21,8 +20,8 @@ app:layout_constraintTop_toTopOf="parent"
 
 <ImageView
 android:id="@+id/logo"
-android:layout_width="100dp"
-android:layout_height="60dp"
+android:layout_width="60dp"
+android:layout_height="20dp"
 android:layout_marginTop="15dp"
 android:src="@drawable/codex_logo"
 app:layout_constraintTop_toTopOf="parent"
@@ -34,7 +33,7 @@ app:layout_constraintStart_toStartOf="parent"
 android:id="@+id/txv_login"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:text="Bem Vindo"
+android:text="Bem Vindo!"
 android:textColor="@color/black"
 android:textSize="34sp"
 android:fontFamily="sans-serif-medium"
@@ -48,7 +47,7 @@ app:layout_constraintTop_toBottomOf="@id/logo"
 android:id="@+id/txv_email"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:layout_marginTop="80dp"
+android:layout_marginTop="50dp"
 android:text="E-mail"
 android:textSize="14sp"
 android:textColor="@color/black"
@@ -62,9 +61,10 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:layout_marginStart="56dp"
 android:layout_marginEnd="56dp"
-android:hint="Digite seu e-mail"
+android:hint="Username ou e-mail"
 android:textColor="#828282"
 android:textSize="16sp"
+android:inputType="text"
 app:layout_constraintStart_toStartOf="@+id/txv_email"
 app:layout_constraintTop_toBottomOf="@+id/txv_email" />
 
@@ -80,19 +80,20 @@ app:layout_constraintStart_toStartOf="@id/edt_password"
 app:layout_constraintTop_toBottomOf="@+id/edt_email" />
 
 <EditText
-    android:id="@+id/edt_password"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="56dp"
-    android:layout_marginEnd="56dp"
-    android:hint="Digite sua senha"
-    android:textColor="#828282"
-    android:textSize="16sp"
-    app:layout_constraintLeft_toLeftOf="@+id/txv_password"
-    app:layout_constraintTop_toBottomOf="@+id/txv_password" />
+android:id="@+id/edt_password"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginStart="56dp"
+android:layout_marginEnd="56dp"
+android:hint="Digite sua senha"
+android:textColor="#828282"
+android:textSize="16sp"
+android:inputType="textWebPassword"
+app:layout_constraintLeft_toLeftOf="@+id/txv_password"
+app:layout_constraintTop_toBottomOf="@+id/txv_password" />
 
 <Button
-android:id="@+id/button"
+android:id="@+id/buttonLogin"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:layout_marginTop="40dp"
@@ -102,56 +103,55 @@ android:textStyle="bold"
 app:layout_constraintEnd_toEndOf="@id/txv_login"
 app:layout_constraintStart_toStartOf="@+id/txv_login"
 app:layout_constraintTop_toBottomOf="@+id/edt_password"
-
 />
 
 <TextView
-    android:id="@+id/forget_password"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Esqueci minha senha!"
-    android:textSize="14sp"
-    android:textColor="#828282"
-    android:layout_marginTop="10dp"
-    app:layout_constraintEnd_toEndOf="@id/txv_login"
-    app:layout_constraintStart_toStartOf="@+id/txv_login"
-    app:layout_constraintTop_toBottomOf="@+id/button"
-    />
-
-<TextView
-    android:id="@+id/or"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="ou..."
-    android:textSize="12sp"
-    android:textColor="#828282"
-    android:layout_marginTop="5dp"
-    app:layout_constraintEnd_toEndOf="@id/txv_login"
-    app:layout_constraintStart_toStartOf="@+id/txv_login"
-    app:layout_constraintTop_toBottomOf="@+id/forget_password"
+android:id="@+id/forget_password"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Esqueci minha senha!"
+android:textSize="14sp"
+android:textColor="#828282"
+android:layout_marginTop="10dp"
+app:layout_constraintEnd_toEndOf="@id/txv_login"
+app:layout_constraintStart_toStartOf="@+id/txv_login"
+app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
 />
 
-<TextView
-    android:id="@+id/signup"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Registre-se aqui"
-    android:textSize="14sp"
-    android:textColor="#828282"
-    android:layout_marginTop="5dp"
-    app:layout_constraintEnd_toEndOf="@id/txv_login"
-    app:layout_constraintStart_toStartOf="@+id/txv_login"
-    app:layout_constraintTop_toBottomOf="@+id/or"
-    />
+<!--<TextView-->
+<!--android:id="@+id/or"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="ou..."-->
+<!--android:textSize="12sp"-->
+<!--android:textColor="#828282"-->
+<!--android:layout_marginTop="5dp"-->
+<!--app:layout_constraintEnd_toEndOf="@id/txv_login"-->
+<!--app:layout_constraintStart_toStartOf="@+id/txv_login"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/forget_password"-->
+<!--/>-->
 
-<ImageView
-    android:layout_width="30dp"
-    android:layout_height="30dp"
-    android:layout_marginTop="80dp"
-    android:src="@drawable/accessibility"
-    app:layout_constraintTop_toBottomOf="@+id/signup"
-    app:layout_constraintEnd_toEndOf="@id/edt_password"
-    tools:layout_editor_absoluteX="35dp" />
+<!--<TextView-->
+<!--android:id="@+id/signup"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Registre-se aqui"-->
+<!--android:textSize="14sp"-->
+<!--android:textColor="#828282"-->
+<!--android:layout_marginTop="5dp"-->
+<!--app:layout_constraintEnd_toEndOf="@id/txv_login"-->
+<!--app:layout_constraintStart_toStartOf="@+id/txv_login"-->
+<!--app:layout_constraintTop_toBottomOf="@+id/or"-->
+<!--/>-->
+
+<!--<ImageView-->
+<!--    android:layout_width="30dp"-->
+<!--    android:layout_height="30dp"-->
+<!--    android:layout_marginTop="80dp"-->
+<!--    android:src="@drawable/accessibility"-->
+<!--    app:layout_constraintTop_toBottomOf="@+id/signup"-->
+<!--    app:layout_constraintEnd_toEndOf="@id/edt_password"-->
+<!--    tools:layout_editor_absoluteX="35dp" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
