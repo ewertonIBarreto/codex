@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#198754"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/codex_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Criar conta"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_logo"
+            app:layout_constraintStart_toStartOf="@+id/iv_logo"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <TextView
+            android:id="@+id/txv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="E-mail"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/edt_email"
+            app:layout_constraintTop_toBottomOf="@+id/txv_login" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:backgroundTint="#198754"
+            android:hint="Username ou e-mail"
+            android:inputType="text"
+            android:textColor="#000"
+            android:textColorLink="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txv_email"
+            app:layout_constraintTop_toBottomOf="@+id/txv_email"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Senha"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/edt_password"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:backgroundTint="#198754"
+            android:hint="Digite sua senha"
+            android:inputType="textWebPassword"
+            android:textColor="#000"
+            android:textColorLink="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/txv_password"
+            app:layout_constraintTop_toBottomOf="@+id/txv_password" />
+
+        <TextView
+            android:id="@+id/txv_confirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Confirmar Senha"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/edt_password"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+        <EditText
+            android:id="@+id/edt_confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:backgroundTint="#198754"
+            android:hint="Digite novamente sua senha"
+            android:inputType="textWebPassword"
+            android:textColor="#000"
+            android:textColorLink="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/txv_confirmPassword"
+            app:layout_constraintTop_toBottomOf="@+id/txv_confirmPassword" />
+
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#198754"
+            android:text="Entrar"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txv_login"
+            app:layout_constraintStart_toStartOf="@+id/txv_login"
+            app:layout_constraintTop_toBottomOf="@+id/edt_confirmPassword" />
+
+
+        <TextView
+            android:id="@+id/btn_backLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Voltar"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/edt_confirmPassword"
+            app:layout_constraintTop_toBottomOf="@id/buttonLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

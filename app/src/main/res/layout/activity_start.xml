@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".LoginActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
 
 
     <TextView
@@ -13,47 +13,43 @@
         android:layout_height="50dp"
         android:background="#198754"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/codex_logo"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txv_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Bem Vindo,"
         android:textColor="@color/black"
         android:textSize="34sp"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="@+id/logo"
         app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <TextView
         android:id="@+id/orientationType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:textSize="16sp"
         android:fontFamily="sans-serif"
         android:text="escolha o tipo do seu perfil para continuar"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/logo"
         app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@id/txv_login"
-        />
+        app:layout_constraintTop_toBottomOf="@id/txv_login" />
 
 
     <Button
@@ -66,16 +62,15 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/logo"
         app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/orientationType"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/orientationType" />
 
     <Button
         android:id="@+id/buttonColab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:paddingHorizontal="20dp"
         android:backgroundTint="#198754"
+        android:paddingHorizontal="20dp"
         android:text="Colaborador"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/logo"
