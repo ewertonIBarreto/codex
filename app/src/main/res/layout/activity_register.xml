@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#198754"
+            android:background="@color/green_primary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -128,11 +128,11 @@
 
 
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/newAction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:backgroundTint="#198754"
+            android:backgroundTint="@color/green_primary"
             android:text="Entrar"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/txv_login"
@@ -151,7 +151,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/edt_confirmPassword"
-            app:layout_constraintTop_toBottomOf="@id/buttonLogin" />
+            app:layout_constraintTop_toBottomOf="@id/newAction" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

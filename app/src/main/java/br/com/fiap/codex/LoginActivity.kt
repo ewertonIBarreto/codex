@@ -7,36 +7,32 @@ import android.widget.*
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_login)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
 
-    //Obrigatoriedade de input
-        val btnLogin = findViewById<Button>(R.id.buttonLogin)
+        //Obrigatoriedade de input
+        val btnLogin = findViewById<Button>(R.id.btn_logIn)
         var user = findViewById<EditText>(R.id.edt_email)
         var password = findViewById<EditText>(R.id.edt_password)
 
         val tvRegister = findViewById<LinearLayout>(R.id.tv_register)
-        val home = findViewById<Button>(R.id.buttonLogin)
 
-
-        btnLogin.setOnClickListener{
-            if(user.text.trim().isNotEmpty() && password.text.trim().isNotEmpty()){
-                Toast.makeText(this, "Provided", Toast.LENGTH_LONG).show()
-            }else{
-                Toast.makeText(this, "Required", Toast.LENGTH_LONG).show()
+        btnLogin.setOnClickListener {
+            if (user.text.trim().isNotEmpty() && password.text.trim().isNotEmpty()) {
+                Toast.makeText(this, "Seja bem vindo!", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Dado(s) solicitados", Toast.LENGTH_LONG).show()
             }
         }
 
-    //Redireciona para se registrar no sistema
-        tvRegister.setOnClickListener{
-            val intent = Intent (this, RegisterActivity::class.java)
+        //Redireciona para se registrar no sistema
+        tvRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        home.setOnClickListener{
-            val intent = Intent (this, HomeActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
 

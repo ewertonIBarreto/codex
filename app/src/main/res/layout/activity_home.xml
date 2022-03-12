@@ -6,33 +6,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".HomeActivity">
 
-
-        <TextView
+        <androidx.cardview.widget.CardView
             android:id="@+id/txv_profileImg"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:background="#eaeaea"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="60dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#eaeaea"
+                android:src="@drawable/pp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
             android:id="@+id/txv_userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="Ivin Rodrigues"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
-            app:layout_constraintTop_toBottomOf="@+id/txv_profileImg" />
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txv_profileImg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Ivin Rodrigues"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_editUser"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/txv_userNl"
@@ -43,31 +73,32 @@
             android:text="Colaborador Nível 2"
             android:textColor="#969696"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txv_userName" />
 
         <TextView
             android:id="@+id/txv_userScoreTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Pontos totais"
             android:textColor="#969696"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txv_userNl" />
 
         <TextView
             android:id="@+id/txv_userScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:fontFamily="sans-serif-condensed-medium"
             android:text="250"
             android:textColor="#79E08F"
             android:textSize="36sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
+            app:layout_constraintStart_toStartOf="@id/txv_userScoreTxt"
             app:layout_constraintTop_toBottomOf="@+id/txv_userScoreTxt" />
 
         <TextView
@@ -79,7 +110,7 @@
             android:text="Açoes realizadas"
             android:textColor="#969696"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
+            app:layout_constraintStart_toStartOf="@id/txv_userScoreTxt"
             app:layout_constraintTop_toBottomOf="@+id/txv_userScore" />
 
         <TextView
@@ -90,30 +121,45 @@
             android:text="25"
             android:textColor="#79E08F"
             android:textSize="36sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
+            app:layout_constraintStart_toStartOf="@id/txv_userScoreTxt"
             app:layout_constraintTop_toBottomOf="@+id/txv_actionsTxt" />
 
-        <TextView
+        <LinearLayout
             android:id="@+id/txv_actionsTxtImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Ações realizadas"
-            android:textColor="#969696"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
-            app:layout_constraintTop_toBottomOf="@+id/txv_actionsPoint" />
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/iv_actions"
+            app:layout_constraintTop_toBottomOf="@+id/txv_actionsPoint">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Última ação registrada: "
+                android:textColor="#969696"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Corrida matinal"
+                android:textColor="#969696"
+                android:textSize="18sp" />
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/iv_actions"
-            android:layout_width="350dp"
-            android:layout_height="176dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:src="@drawable/actions"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/txv_profileImg"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txv_actionsTxtImg" />
 
         <TextView
@@ -125,7 +171,7 @@
             android:text="Corrida - 4km"
             android:textColor="#969696"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/txv_profileImg"
+            app:layout_constraintStart_toStartOf="@+id/iv_actions"
             app:layout_constraintTop_toBottomOf="@+id/iv_actions" />
 
         <TextView
@@ -136,25 +182,23 @@
             android:text="22 de Fevereiro"
             android:textColor="#bbbbbb"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_actions"
             app:layout_constraintTop_toBottomOf="@+id/txv_actionImg"
-            tools:layout_editor_absoluteX="265dp"
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/buttonLogin"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_newAction"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginRight="45dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="30dp"
             android:backgroundTint="#79E08F"
             android:text="Nova ação"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/iv_actions"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_actions"
             app:layout_constraintStart_toStartOf="@+id/iv_actions"
-            app:layout_constraintTop_toBottomOf="@+id/txv_km"
-
-            />
+            app:layout_constraintTop_toBottomOf="@+id/txv_km" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

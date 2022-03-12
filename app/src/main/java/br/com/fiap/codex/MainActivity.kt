@@ -7,10 +7,10 @@ import android.widget.Button
 import android.content.Intent
 
 //Primeiro método que roda, quando o app é aberto
-class StartActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState) //redesenha a tela e mantém os dados do usuário
-        setContentView(R.layout.activity_start) //vinculação entre o kotlyn e o layout
+        setContentView(R.layout.activity_main) //vinculação entre o kotlyn e o layout
 
         //Chamada para outra activity interna
         val btnAbrirAdm = findViewById<Button>(R.id.buttonAdm)

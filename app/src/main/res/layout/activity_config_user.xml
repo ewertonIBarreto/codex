@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ConfigUserActivity">
+
+        <TextView
+            android:id="@+id/tv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/green_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/codex_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/txv_profileImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_banner">
+
+            <ImageView
+                android:id="@+id/iv_userImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#eaeaea"
+                android:src="@drawable/pp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/txv_userImgConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:backgroundTint="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="@android:dimen/app_icon_size"
+            app:layout_constraintEnd_toEndOf="@+id/txv_profileImg"
+            app:layout_constraintStart_toStartOf="@+id/txv_profileImg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_banner">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/green_primary"
+                android:backgroundTint="@color/green_primary"
+                android:padding="5dp"
+                android:src="@drawable/ic_photo_user_config" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/newDataUserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txv_userImgConfig">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edt_nameConfig"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_mutet"
+                android:drawableEnd="@drawable/ic_user"
+                android:drawableTint="@color/green_primary"
+                android:hint="Editar meu nome"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorLink="@color/black"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newDataUserCell"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/newDataUserName"
+            app:layout_constraintTop_toBottomOf="@+id/newDataUserName">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celular"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/Cell"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_mutet"
+                android:drawableEnd="@drawable/ic_settings_cell"
+                android:drawableTint="@color/green_primary"
+                android:hint="Insira o número do seu celular"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textColorLink="@color/black"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newDataUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/newDataUserName"
+            app:layout_constraintTop_toBottomOf="@+id/newDataUserCell">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_mutet"
+                android:drawableEnd="@drawable/ic_email_config"
+                android:drawableTint="@color/green_primary"
+                android:hint="Aqui, seu novo email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorLink="@color/black"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="25dp"
+            android:text="Insira o seu endereço"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDataUserEmail" />
+
+
+        <LinearLayout
+            android:id="@+id/newDataUserCep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/newDataUserName"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_add">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CEP"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edt_cep"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_mutet"
+                android:drawableEnd="@drawable/ic_house_config"
+                android:drawableTint="@color/green_primary"
+                android:hint="Insira o seu CEP"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorLink="@color/black"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/searchAddress"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/newDataUserName"
+            app:layout_constraintTop_toBottomOf="@+id/newDataUserCep">
+
+            <Button
+                android:id="@+id/btn_searchByCep"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_primary"
+                android:text="Econtrar por CEP"
+                android:textSize="10dp"
+                android:textStyle="bold"></Button>
+
+            <Button
+                android:id="@+id/btn_searchByRCE"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@color/green_primary"
+                android:text="Encontrar por RCE"
+                android:textSize="10dp"
+                android:textStyle="bold"></Button>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="12dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/searchAddress"
+            app:layout_constraintStart_toStartOf="@+id/searchAddress"
+            app:layout_constraintTop_toBottomOf="@+id/searchAddress" />
+
+
+        <LinearLayout
+            android:id="@+id/newDataUserStreet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/newDataUserName"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rua"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/edt_street"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_mutet"
+                android:drawableEnd="@drawable/ic_road_config"
+                android:drawableTint="@color/green_primary"
+                android:hint="Aqui, sua rua"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorLink="@color/black"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newDataUserComplements"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/newDataUserName"
+            app:layout_constraintTop_toBottomOf="@+id/newDataUserStreet">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nº"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_numberHouse"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_mutet"
+                    android:drawableTint="@color/green_primary"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complemento?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/et_complement"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_mutet"
+                    android:drawableTint="@color/green_primary"
+                    android:hint="-"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/black"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/newDataUserComplementsCity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/newDataUserName"
+            app:layout_constraintTop_toBottomOf="@+id/newDataUserComplements">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cidade"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_city"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_mutet"
+                    android:drawableEnd="@drawable/ic_city"
+                    android:drawableTint="@color/green_primary"
+                    android:hint="-"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/black"
+                    android:textCursorDrawable="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estado"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/edt_state"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_mutet"
+                    android:drawableTint="@color/green_primary"
+                    android:hint="-"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorLink="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
