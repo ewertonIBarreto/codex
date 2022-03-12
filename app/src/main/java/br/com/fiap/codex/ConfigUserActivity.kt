@@ -40,6 +40,7 @@ class ConfigUserActivity : AppCompatActivity() {
                         Toast.makeText(this@ConfigUserActivity, it.toString(), Toast.LENGTH_LONG)
                             .show()
 
+
                         progressBar.visibility = View.INVISIBLE
                     } ?: Toast.makeText(
                         this@ConfigUserActivity,
