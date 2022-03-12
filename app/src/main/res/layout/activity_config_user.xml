@@ -76,9 +76,8 @@
 
         <LinearLayout
             android:id="@+id/newDataUserName"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="46dp"
             android:layout_marginTop="50dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,9 +108,8 @@
 
         <LinearLayout
             android:id="@+id/newDataUserCell"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="46dp"
             android:layout_marginTop="25dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="@+id/newDataUserName"
@@ -141,9 +139,8 @@
 
         <LinearLayout
             android:id="@+id/newDataUserEmail"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="46dp"
             android:layout_marginTop="25dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="@+id/newDataUserName"
@@ -186,9 +183,8 @@
 
         <LinearLayout
             android:id="@+id/newDataUserCep"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="46dp"
             android:layout_marginTop="18dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="@+id/newDataUserName"
@@ -259,9 +255,8 @@
 
         <LinearLayout
             android:id="@+id/newDataUserStreet"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="46dp"
             android:layout_marginTop="12dp"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="@+id/newDataUserName"
@@ -290,12 +285,12 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:id="@+id/newDataUserComplements"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="46dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="@+id/newDataUserName"
             app:layout_constraintTop_toBottomOf="@+id/newDataUserStreet">
@@ -328,7 +323,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:orientation="vertical">
@@ -355,12 +350,10 @@
             </LinearLayout>
         </LinearLayout>
 
-
         <LinearLayout
             android:id="@+id/newDataUserComplementsCity"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="46dp"
             android:layout_marginTop="12dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="@+id/newDataUserName"
